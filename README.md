@@ -1,22 +1,13 @@
-# Sachin Jha — Portfolio
-
-A static portfolio site — plain HTML, CSS, and JavaScript. No build step, no framework, no dependencies.
-
-## Files
-- `index.html` — page content and structure
-- `style.css` — theme, layout, responsive rules
-- `script.js` — theme toggle, mobile nav, scroll-reveal, active nav highlighting
-- `resume.pdf` — served by the "Download Resume" button
 \documentclass[10pt, letterpaper]{article}
 
 % Packages:
 \usepackage[
     ignoreheadfoot,
-    top=0.4 cm,
-    bottom=0.4 cm,
-    left=1 cm,
-    right=1 cm,
-    footskip=1.0 cm,
+    top=0.3 cm,
+    bottom=0.3 cm,
+    left=0.9 cm,
+    right=0.9 cm,
+    footskip=0.7 cm,
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -64,10 +55,10 @@ A static portfolio site — plain HTML, CSS, and JavaScript. No build step, no f
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
-\titlespacing{\section}{-1pt}{0.1 cm}{0.1 cm}
+\titlespacing{\section}{-1pt}{0.08 cm}{0.08 cm}
 
 \renewcommand\labelitemi{$\circ$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm,parsep=0.10 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.05 cm,parsep=0.05 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
 \newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.05 cm,parsep=0.05 cm,partopsep=0pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
 \newenvironment{onecolentry}{\begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}}{\end{adjustwidth}}
 \newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
@@ -83,7 +74,7 @@ A static portfolio site — plain HTML, CSS, and JavaScript. No build step, no f
 \begin{header}
 \textbf{\fontsize{24 pt}{24 pt}\selectfont Sachin Jha}
 
-\vspace{0.3 cm}
+\vspace{0.2 cm}
 
 \normalsize
 \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Mumbai}%
@@ -208,8 +199,6 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 
 \item Integrated Kubeflow Pipelines, Katib, and model serving to streamline the machine learning lifecycle with reproducible workflows.
 
-\item Tools: Kubeflow, Kubernetes, Docker, Python, ML Pipelines
-
 \end{highlights}
 \end{onecolentry}
 
@@ -225,8 +214,6 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 
 \item Leveraged \textbf{DaemonSets} to collect logs from every Kubernetes node, simplifying observability and debugging in distributed environments.
 
-\item Tools: Go, Kubernetes, DaemonSets, Linux
-
 \end{highlights}
 \end{onecolentry}
 
@@ -240,8 +227,6 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 \item Designed a \textbf{GitOps CI/CD pipeline} integrating Jenkins and ArgoCD for automated Kubernetes deployments.
 
 \item Implemented 4 pipeline stages -- SonarQube analysis, Docker image builds, auto-sync, and rollback -- to improve deployment reliability.
-
-\item Tools: Jenkins, ArgoCD, Docker, SonarQube, Kubernetes
 
 \end{highlights}
 \end{onecolentry}
