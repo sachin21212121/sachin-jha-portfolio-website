@@ -74,7 +74,7 @@
 \begin{header}
 \textbf{\fontsize{24 pt}{24 pt}\selectfont Sachin Jha}
 
-\vspace{0.2 cm}
+\vspace{0.15 cm}
 
 \normalsize
 \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Mumbai}%
@@ -177,7 +177,7 @@
 \textbf{Speaker at CNCF Thane} -- Delivered a session on WebAssembly in Cloud Native Ecosystems, highlighting its role in portability, performance, and secure edge computing.
 
 \item
-Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, acknowledged by the AWS Security team as part of their bug bounty program.
+Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, acknowledged by AWS Security's bug bounty program.
 
 \end{highlights}\end{onecolentry}
 
