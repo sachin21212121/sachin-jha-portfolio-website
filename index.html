@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sachin Jha — Cloud Native &amp; DevOps Engineer</title>
-  <meta name="description" content="Portfolio of Sachin Jha — Cloud Native, Kubernetes, and DevOps engineer. KubeCon speaker, CNCF contributor, building automation for cloud infrastructure and security.">
-  <meta property="og:title" content="Sachin Jha — Cloud Native & DevOps Engineer">
-  <meta property="og:description" content="Kubernetes, DevOps, and cloud security engineer. KubeCon speaker, open-source contributor.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23326CE5'/%3E%3Ctext x='50' y='67' font-size='46' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Portfolio of Sachin Jha — Cloud Native, Kubernetes, and DevOps engineer. KubeCon speaker, open-source contributor, building automation for cloud infrastructure and security.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2358a6ff'/%3E%3Ctext x='50' y='67' font-size='46' font-family='monospace' font-weight='700' fill='%230d1117' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,15 +16,15 @@
 
   <header class="site-header" id="top">
     <div class="container nav">
-      <a href="#top" class="logo">SJ<span class="logo-dot">.</span></a>
+      <a href="#top" class="logo"><span class="prompt-sym">$</span> sachin<span class="logo-dot">.</span>jha</a>
 
       <nav class="nav-links" id="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#speaking">Speaking</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">~/about</a>
+        <a href="#experience">~/experience</a>
+        <a href="#projects">~/projects</a>
+        <a href="#speaking">~/speaking</a>
+        <a href="#certifications">~/certs</a>
+        <a href="#contact">~/contact</a>
       </nav>
 
       <div class="nav-actions">
@@ -42,24 +42,42 @@
   <main id="main">
     <section class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow reveal">Hi, I'm</p>
-        <h1 class="reveal">Sachin Jha</h1>
-        <p class="hero-role reveal">Cloud Native &amp; DevOps Engineer</p>
-        <p class="hero-bio reveal">
-          B.Tech AI/ML student and Engineering Intern at Zycus, building automation for
-          Kubernetes, OpenShift, and cloud security. KubeCon speaker and open-source
-          contributor with the Linux Foundation's KubeEdge project, currently completing
-          CKA &amp; KCNA coursework on KodeKloud.
-        </p>
+        <div class="terminal-window reveal">
+          <div class="terminal-bar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="terminal-title">sachin@zycus:~</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">sachin@zycus:~$</span> whoami</p>
+            <p class="term-out term-name" id="typed-name"></p>
+            <p><span class="prompt">sachin@zycus:~$</span> cat role.txt</p>
+            <p class="term-out">Cloud Native &amp; DevOps Engineer</p>
+            <p><span class="prompt">sachin@zycus:~$</span> cat mission.md</p>
+            <p class="term-out term-bio">B.Tech AI/ML student and Engineering Intern at Zycus — working<br>daily across Linux systems, Kubernetes, and container<br>orchestration, with hands-on edge computing experience<br>from the KubeEdge project.</p>
+            <p class="term-cursor-line"><span class="prompt">sachin@zycus:~$</span> <span class="cursor">▌</span></p>
+          </div>
+        </div>
+
+        <div class="identity-badges reveal">
+          <span class="id-badge">Open Source Contributor</span>
+          <span class="id-badge">KubeCon Speaker</span>
+          <span class="id-badge">Linux &amp; Containers</span>
+          <span class="id-badge">Edge Computing</span>
+          <span class="id-badge">LFX Mentee</span>
+          <span class="id-badge">Zycus Intern</span>
+          <span class="id-badge">AWS Bug Bounty</span>
+          <span class="id-badge">Kubeflow Volunteer</span>
+        </div>
+
         <div class="hero-actions reveal">
           <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="#contact" class="btn btn-ghost">Get in Touch</a>
           <a href="Sachin_Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
         </div>
         <div class="social-row reveal">
-          <a href="https://github.com/sachin21212121" class="social-link" data-placeholder>GitHub</a>
-          <a href="https://www.linkedin.com/in/sachinjhadev/" class="social-link" data-placeholder>LinkedIn</a>
-          <a href="https://hashnode.com/@Sachinjha09" class="social-link" data-placeholder>Blog</a>
+          <a href="https://github.com/sachin21212121" class="social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/sachinjhadev/" class="social-link">LinkedIn</a>
+          <a href="https://hashnode.com/@Sachinjha09" class="social-link">Blog</a>
           <a href="mailto:jhasachin0115@gmail.com" class="social-link">Email</a>
         </div>
       </div>
@@ -67,7 +85,7 @@
 
     <section id="about" class="section">
       <div class="container">
-        <h2 class="reveal"><span class="section-index">01</span>About</h2>
+        <h2 class="reveal"><span class="section-index">01</span>about</h2>
         <div class="about-grid reveal">
           <p>
             I'm an AI/ML undergraduate at the University of Mumbai who spends most of my time in
@@ -78,73 +96,97 @@
           </p>
           <div class="about-facts">
             <div class="fact">
-              <span class="fact-label">Education</span>
+              <span class="fact-label">education</span>
               B.Tech, Artificial Intelligence &amp; Machine Learning<br>University of Mumbai · 2023 – Present
             </div>
             <div class="fact">
-              <span class="fact-label">Based in</span>
+              <span class="fact-label">based_in</span>
               Mumbai, India
             </div>
             <div class="fact">
-              <span class="fact-label">Focus areas</span>
+              <span class="fact-label">focus</span>
               Kubernetes &amp; Cloud Security · MLOps · Edge Computing
             </div>
           </div>
         </div>
 
-        <div class="badge-row reveal">
-          <span class="badge">KubeCon Speaker</span>
-          <span class="badge">AWS Cloud Essentials</span>
-          <span class="badge">CNCF Contributor</span>
+        <svg class="k8s-edge-diagram reveal" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a Kubernetes control plane orchestrating containerized pods and extending to edge nodes">
+          <line x1="250" y1="130" x2="90" y2="60" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="250" y1="130" x2="250" y2="40" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="250" y1="130" x2="410" y2="60" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="250" y1="130" x2="90" y2="210" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="250" y1="130" x2="410" y2="210" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/>
+
+          <polygon points="250,90 285,110 285,150 250,170 215,150 215,110" fill="var(--bg-elevated-2)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="250" y="134" text-anchor="middle" font-size="11" fill="var(--accent)" font-family="var(--font-mono)">k8s</text>
+
+          <rect x="60" y="35" width="60" height="40" rx="6" fill="var(--bg-elevated)" stroke="var(--green)" stroke-width="1.5"/>
+          <text x="90" y="59" text-anchor="middle" font-size="10" fill="var(--green)" font-family="var(--font-mono)">pod</text>
+
+          <rect x="220" y="10" width="60" height="40" rx="6" fill="var(--bg-elevated)" stroke="var(--green)" stroke-width="1.5"/>
+          <text x="250" y="34" text-anchor="middle" font-size="10" fill="var(--green)" font-family="var(--font-mono)">pod</text>
+
+          <rect x="380" y="35" width="60" height="40" rx="6" fill="var(--bg-elevated)" stroke="var(--green)" stroke-width="1.5"/>
+          <text x="410" y="59" text-anchor="middle" font-size="10" fill="var(--green)" font-family="var(--font-mono)">pod</text>
+
+          <rect x="55" y="190" width="70" height="40" rx="6" fill="var(--bg-elevated)" stroke="var(--purple)" stroke-width="1.5"/>
+          <text x="90" y="214" text-anchor="middle" font-size="9" fill="var(--purple)" font-family="var(--font-mono)">edge</text>
+
+          <rect x="375" y="190" width="70" height="40" rx="6" fill="var(--bg-elevated)" stroke="var(--purple)" stroke-width="1.5"/>
+          <text x="410" y="214" text-anchor="middle" font-size="9" fill="var(--purple)" font-family="var(--font-mono)">edge</text>
+        </svg>
+
+        <div class="skill-badges reveal">
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" loading="lazy">
+          <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" loading="lazy">
+          <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" loading="lazy">
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" loading="lazy">
+          <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" loading="lazy">
+          <img src="https://img.shields.io/badge/OpenShift-EE0000?style=for-the-badge&logo=redhatopenshift&logoColor=white" alt="OpenShift" loading="lazy">
+          <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" loading="lazy">
+          <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" loading="lazy">
+          <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" loading="lazy">
+          <img src="https://img.shields.io/badge/ArgoCD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" alt="Argo CD" loading="lazy">
+          <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" loading="lazy">
+          <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" loading="lazy">
+          <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" loading="lazy">
+          <img src="https://img.shields.io/badge/Kubeflow-3E60F5?style=for-the-badge&logo=kubeflow&logoColor=white" alt="Kubeflow" loading="lazy">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" loading="lazy">
+          <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" loading="lazy">
+          <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" loading="lazy">
         </div>
 
-        <div class="skills reveal">
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <p>Python, Go, Bash, JavaScript</p>
-          </div>
-          <div class="skill-group">
-            <h3>Cloud &amp; DevOps</h3>
-            <p>Kubernetes, OpenShift, Docker, Terraform, Jenkins, Argo CD, GitHub Actions, AWS CodeBuild</p>
-          </div>
-          <div class="skill-group">
-            <h3>Observability &amp; Security</h3>
-            <p>Prometheus, Zscaler (ZIA, ZPA, ZCC), CVE, NVD, EPSS, CVSS</p>
-          </div>
-          <div class="skill-group">
-            <h3>AI &amp; MLOps</h3>
-            <p>MCP, Kubeflow, KServe, AI Agents</p>
-          </div>
-          <div class="skill-group">
-            <h3>Platforms &amp; Data</h3>
-            <p>AWS, Linux, OpenShift, Git, Salesforce, MySQL, MongoDB</p>
-          </div>
+        <div class="gh-stats-grid reveal">
+          <img class="gh-stat-img" src="https://github-readme-stats.vercel.app/api?username=sachin21212121&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117" alt="Sachin's GitHub stats" loading="lazy">
+          <img class="gh-stat-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sachin21212121&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117" alt="Sachin's top languages" loading="lazy">
         </div>
+        <img class="gh-contrib reveal" src="https://ghchart.rshah.org/58a6ff/sachin21212121" alt="Sachin's GitHub contribution graph" loading="lazy">
+        <p class="gh-note">Live stats pulled from GitHub via github-readme-stats.vercel.app and ghchart.rshah.org (third-party, public, no auth) — may take a second to load.</p>
       </div>
     </section>
 
     <section id="experience" class="section alt">
       <div class="container">
-        <h2 class="reveal"><span class="section-index">02</span>Experience</h2>
+        <h2 class="reveal"><span class="section-index">02</span>experience</h2>
         <div class="timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-marker"></div>
+            <span class="git-glyph">*</span>
             <div class="timeline-content">
               <div class="timeline-head">
                 <h3>Engineering Intern · Zycus</h3>
                 <span class="timeline-date">Jun 2026 – Present</span>
               </div>
               <ul>
-                <li>Built a production-ready Zscaler MCP Server supporting ZIA, ZPA, and ZCC, automating enterprise security information retrieval.</li>
-                <li>Developed an AI-powered vulnerability scanner using CVE, NVD, EPSS, and CVSS to assess software risk and recommend secure versions.</li>
-                <li>Automated OpenShift VM provisioning using Salesforce, Python, and Golden PVC templates, replacing a manual provisioning workflow.</li>
-                <li>Built and deployed enterprise automation with AWS CodeBuild and ArgoCD, while contributing to AI-powered developer productivity tools.</li>
+                <li>Built a production-ready Zscaler MCP Server unifying 3 modules (ZIA, ZPA, ZCC) into a single interface, used daily by security leads and 100+ engineers across the global delivery team when resolving access issues.</li>
+                <li>Developed an AI-powered vulnerability scanner correlating 4 data sources (CVE, NVD, EPSS, CVSS) to assess software risk — adopted as the standard tool by 1000+ engineers across Zycus.</li>
+                <li>Automated OpenShift VM provisioning using Salesforce, Python, and Golden PVC templates, replacing a manual, ticket-based workflow — once approved, VMs now provision in OCP within seconds, tracked end-to-end through Jira.</li>
+                <li>Built and deployed enterprise automation using AWS CodeBuild and ArgoCD, contributing to AI-powered developer productivity tools.</li>
               </ul>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker"></div>
+            <span class="git-glyph">*</span>
             <div class="timeline-content">
               <div class="timeline-head">
                 <h3>LFX Mentee · KubeEdge (The Linux Foundation)</h3>
@@ -152,23 +194,20 @@
               </div>
               <ul>
                 <li>Contributed to KubeEdge documentation, updating version-specific installation guides and troubleshooting resources.</li>
-                <li>Built an ARM64 simulation architecture to validate CloudCore/EdgeCore deployments before testing on physical RK3588 hardware.</li>
-                <li>Explored RK3588, AI inference, NPU workloads, and edge computing while debugging edge-cloud communication and performance.</li>
-                <li>Collaborated with mentors from the Linux Foundation and the KubeEdge community.</li>
+                <li>Built an ARM64 simulation architecture to validate CloudCore/EdgeCore deployments and debug edge-cloud communication and performance, removing the need for physical RK3588 hardware during early-stage testing.</li>
               </ul>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker"></div>
+            <span class="git-glyph">*</span>
             <div class="timeline-content">
               <div class="timeline-head">
                 <h3>Technical Writer · Hashnode</h3>
                 <span class="timeline-date">Mar 2025 – Present</span>
               </div>
               <ul>
-                <li>Published technical blogs on Kubernetes, Docker, Go, and AWS.</li>
-                <li>Created hands-on tutorials covering KubeEdge, K3s, and other CNCF technologies.</li>
+                <li>Published technical blog posts and tutorials on Kubernetes, Docker, Go, AWS, KubeEdge, and K3s, translating hands-on infrastructure work into practical, reproducible guides.</li>
               </ul>
             </div>
           </article>
@@ -178,7 +217,7 @@
 
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="reveal"><span class="section-index">03</span>Projects</h2>
+        <h2 class="reveal"><span class="section-index">03</span>projects</h2>
         <div class="project-grid">
           <article class="card project-card reveal">
             <h3>ModelForge</h3>
@@ -187,7 +226,7 @@
             <div class="tag-row">
               <span class="tag">Kubeflow</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Python</span>
             </div>
-            <a href="https://github.com/sachin21212121/ModelForge-Kubeflow-Project.git" class="card-link" data-placeholder>View on GitHub →</a>
+            <a href="https://github.com/sachin21212121/ModelForge-Kubeflow-Project" class="card-link">View on GitHub →</a>
           </article>
 
           <article class="card project-card reveal">
@@ -197,17 +236,17 @@
             <div class="tag-row">
               <span class="tag">Go</span><span class="tag">Kubernetes</span><span class="tag">DaemonSets</span><span class="tag">Linux</span>
             </div>
-            <a href="https://github.com/sachin21212121/kubejournal.git" class="card-link" data-placeholder>View on GitHub →</a>
+            <a href="https://github.com/sachin21212121/kubejournal" class="card-link">View on GitHub →</a>
           </article>
 
           <article class="card project-card reveal">
             <h3>GitOps CI/CD Pipeline</h3>
             <p class="project-sub">Jenkins &amp; ArgoCD automation</p>
-            <p>An end-to-end GitOps pipeline for automated Kubernetes deployments, with SonarQube analysis, Docker image builds, auto-sync, and rollback for reliable releases.</p>
+            <p>An end-to-end GitOps pipeline for automated Kubernetes deployments, with 4 pipeline stages — SonarQube analysis, Docker image builds, auto-sync, and rollback — for reliable releases.</p>
             <div class="tag-row">
               <span class="tag">Jenkins</span><span class="tag">ArgoCD</span><span class="tag">Docker</span><span class="tag">SonarQube</span>
             </div>
-            <a href="https://github.com/sachin21212121/jenkins-end-to-end-cicd-using-argocd.git" class="card-link" data-placeholder>View on GitHub →</a>
+            <a href="https://github.com/sachin21212121/jenkins-end-to-end-cicd-using-argocd" class="card-link">View on GitHub →</a>
           </article>
         </div>
       </div>
@@ -215,24 +254,24 @@
 
     <section id="speaking" class="section alt">
       <div class="container">
-        <h2 class="reveal"><span class="section-index">04</span>Speaking &amp; Achievements</h2>
+        <h2 class="reveal"><span class="section-index">04</span>speaking &amp; recognition</h2>
         <div class="achievement-list">
           <article class="achievement reveal">
             <h3>KubeCon + CloudNativeCon India 2026 — Speaker</h3>
-            <p>"Validating RK3588 for KubeEdge: Scalable ARM64 Edge Node Simulation Without Hardware."</p>
-            <a href="https://youtu.be/jh6MABNazjg?si=FpBaVoH76mj-QRMh" class="card-link" data-placeholder>Watch talk →</a>
+            <p>Presented a talk, "Validating RK3588 for KubeEdge: Scalable ARM64 Edge Node Simulation Without Hardware."</p>
+            <a href="https://youtu.be/jh6MABNazjg?si=FpBaVoH76mj-QRMh" class="card-link">Watch talk →</a>
+          </article>
+          <article class="achievement reveal">
+            <h3>Kubeflow Booth Volunteer</h3>
+            <p>Volunteered at the Kubeflow booth at KubeCon + CloudNativeCon India 2026, engaging with the MLOps community and gaining hands-on exposure to real-world ML workflows.</p>
           </article>
           <article class="achievement reveal">
             <h3>CNCF Thane — Speaker</h3>
-            <p>Delivered a session on WebAssembly in Cloud Native Ecosystems, covering portability, performance, and secure edge computing.</p>
+            <p>Delivered a session on WebAssembly in Cloud Native Ecosystems: portability, performance, and secure edge computing.</p>
           </article>
           <article class="achievement reveal">
             <h3>AWS Security Acknowledgment</h3>
-            <p>Reported a valid local path traversal vulnerability in AWS SAM CLI, acknowledged by the AWS Security team as part of their bug bounty program.</p>
-          </article>
-          <article class="achievement reveal">
-            <h3>Community</h3>
-            <p>Active in GDG Cloud, AWS User Groups, and CNCF meetups.</p>
+            <p>Reported a valid local path traversal vulnerability in AWS SAM CLI, acknowledged by AWS Security under their bug bounty program.</p>
           </article>
         </div>
       </div>
@@ -240,23 +279,23 @@
 
     <section id="certifications" class="section">
       <div class="container">
-        <h2 class="reveal"><span class="section-index">05</span>Certifications</h2>
+        <h2 class="reveal"><span class="section-index">05</span>certifications</h2>
         <div class="cert-grid">
-          <a href="https://learn.kodekloud.com/user/certificate/e527fc9c-a3a3-419e-a9dc-3a2da78ec0ae" class="cert-card reveal" data-placeholder>
-            <h3>CKA — Course Completed</h3>
-            <p>KodeKloud</p>
-          </a>
-          <a href="https://learn.kodekloud.com/user/certificate/00365e35-1076-4543-973b-d891ee3eb82f" class="cert-card reveal" data-placeholder>
-            <h3>KCNA — Course Completed</h3>
-            <p>KodeKloud</p>
-          </a>
-          <a href="https://www.credly.com/badges/59909b1f-fa82-4e42-9ab0-8d263d91fb1b/" class="cert-card reveal" data-placeholder>
+          <a href="https://www.credly.com/badges/59909b1f-fa82-4e42-9ab0-8d263d91fb1b" class="cert-card reveal">
             <h3>KubeCon + CloudNativeCon India 2026</h3>
             <p>Speaker</p>
           </a>
-          <a href="https://www.credly.com/badges/428bab79-2bfc-4740-b77a-caca440b69ad/" class="cert-card reveal" data-placeholder>
+          <a href="https://www.credly.com/badges/428bab79-2bfc-4740-b77a-caca440b69ad" class="cert-card reveal">
             <h3>AWS Knowledge: Cloud Essentials</h3>
             <p>Amazon Web Services</p>
+          </a>
+          <a href="https://learn.kodekloud.com/user/certificate/e527fc9c-a3a3-419e-a9dc-3a2da78ec0ae" class="cert-card reveal">
+            <h3>CKA — Course Completed</h3>
+            <p>KodeKloud</p>
+          </a>
+          <a href="https://learn.kodekloud.com/user/certificate/00365e35-1076-4543-973b-d891ee3eb82f" class="cert-card reveal">
+            <h3>KCNA — Course Completed</h3>
+            <p>KodeKloud</p>
           </a>
         </div>
       </div>
@@ -264,15 +303,15 @@
 
     <section id="contact" class="section alt">
       <div class="container contact-inner">
-        <h2 class="reveal"><span class="section-index">06</span>Get in Touch</h2>
+        <h2 class="reveal"><span class="section-index">06</span>contact</h2>
         <p class="reveal">Open to opportunities in cloud infrastructure, DevOps, and platform engineering. Reach out — I usually reply within a day.</p>
         <div class="contact-actions reveal">
           <a href="mailto:jhasachin0115@gmail.com" class="btn btn-primary">jhasachin0115@gmail.com</a>
         </div>
         <div class="social-row reveal">
-          <a href="https://github.com/sachin21212121/" class="social-link" data-placeholder>GitHub</a>
-          <a href="https://www.linkedin.com/in/sachinjhadev/" class="social-link" data-placeholder>LinkedIn</a>
-          <a href="https://hashnode.com/@Sachinjha09" class="social-link" data-placeholder>Hashnode</a>
+          <a href="https://github.com/sachin21212121" class="social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/sachinjhadev/" class="social-link">LinkedIn</a>
+          <a href="https://hashnode.com/@Sachinjha09" class="social-link">Hashnode</a>
         </div>
       </div>
     </section>
@@ -280,7 +319,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Sachin Jha. Built with HTML, CSS &amp; JavaScript.</p>
+      <p><span class="prompt">sachin@zycus:~$</span> echo "&copy; <span id="year"></span> Sachin Jha" <span class="cursor cursor-footer">▌</span></p>
     </div>
   </footer>
 
