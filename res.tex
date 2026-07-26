@@ -1,0 +1,286 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=0.4 cm,
+    bottom=0.4 cm,
+    left=1 cm,
+    right=1 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Sachin Jha's CV},
+    pdfauthor={Sachin Jha},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.1 cm}{0.1 cm}
+
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm,parsep=0.10 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
+\newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.05 cm,parsep=0.05 cm,partopsep=0pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{\begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}}{\end{adjustwidth}}
+\newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
+\newenvironment{header}{\setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}}{\par\kern\topsep}
+
+\newcommand{\placelastupdatedtext}{\AddToShipoutPictureFG*{\put(\LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},\LenToUnit{\paperheight-1.0 cm}){\vtop{{\null}\makebox[0pt][c]{\small\color{gray}\textit{}}}}}}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+\placelastupdatedtext
+\begin{header}
+\textbf{\fontsize{24 pt}{24 pt}\selectfont Sachin Jha}
+
+\vspace{0.3 cm}
+
+\normalsize
+\mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Mumbai}%
+\kern 0.25 cm%
+\mbox{\hrefWithoutArrow{mailto:jhasachin0115@gmail.com}{\color{blue}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}jhasachin0115@gmail.com}}%
+\kern 0.25 cm%
+\mbox{\hrefWithoutArrow{tel:+917977761012}{\color{blue}{\footnotesize\faPhone*}\hspace*{0.13cm}+91 7977761012}}%
+\kern 0.25 cm%
+
+\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/sachinjhadev/}{\color{blue}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}LinkedIn}}%
+\kern 0.25 cm%
+\mbox{\hrefWithoutArrow{https://github.com/sachin21212121}{\color{blue}{\footnotesize\faGithub}\hspace*{0.13cm}Github}}%
+\end{header}
+
+\section{Education}
+\begin{twocolentry}{\textit{Aug 2023 -- Present}}\textbf{University of Mumbai}\textit{\newline B.Tech in Artificial Intelligence and Machine Learning}\end{twocolentry}
+\begin{onecolentry}
+\begin{highlights}
+\item GPA: 8..53/10.0
+\item Coursework: Machine Learning, Computer Networks, Operating Systems, Cloud Computing, Distributed Systems\end{highlights}
+\end{onecolentry}
+
+\section{Technical Skills}
+
+\begin{onecolentry}
+\textbf{Languages:} Python, Go, Bash, JavaScript
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Cloud \& DevOps:} Kubernetes, OpenShift, Docker, Terraform, Jenkins, Argo CD, GitHub Actions, AWS CodeBuild
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Observability \& Security:} Prometheus, Zscaler (ZIA, ZPA, ZCC), CVE, NVD, EPSS, CVSS
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{AI \& MLOps:} MCP, Kubeflow, KServe, AI Agents
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Platforms:} AWS, Linux, OpenShift, Git, Salesforce
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Databases:} MySQL, MongoDB
+\end{onecolentry}
+\section{Experience}
+
+\begin{twocolentry}{\textit{Jun 2026 -- Present}}
+\textbf{Zycus}
+\textit{\newline Engineering Intern}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Built a production-ready \textbf{Zscaler MCP Server} supporting \textbf{ZIA}, \textbf{ZPA}, and \textbf{ZCC}, automating enterprise security information retrieval.
+
+\item Developed an AI-powered \textbf{Vulnerability Scanner} using \textbf{CVE}, \textbf{NVD}, \textbf{EPSS}, and \textbf{CVSS} to assess software risk and recommend secure versions.
+
+\item Automated \textbf{OpenShift VM Provisioning} using \textbf{Salesforce}, \textbf{Python}, and \textbf{Golden PVC} templates, replacing a manual provisioning workflow.
+
+\item Built and deployed enterprise automation using \textbf{AWS CodeBuild} and \textbf{ArgoCD}, while contributing to AI-powered developer productivity tools.
+
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{\textit{Jun 2025 -- Sep 2025}}
+\textbf{KubeEdge}
+\textit{\newline LFX Mentee (The Linux Foundation)}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Contributed to \textbf{KubeEdge documentation} by updating version-specific installation guides and troubleshooting resources.
+
+\item Built an \textbf{ARM64 simulation architecture} to validate \textbf{CloudCore/EdgeCore} deployments before testing on physical \textbf{RK3588} hardware.
+
+\item Explored \textbf{RK3588}, \textbf{AI inference}, \textbf{NPU workloads}, and \textbf{edge computing} while debugging edge-cloud communication and performance.
+
+\item Collaborated with mentors from the \textbf{Linux Foundation} and the \textbf{KubeEdge} community, strengthening open-source and cloud-native engineering skills.
+
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{\textit{Mar 2025 -- Present}}
+\textbf{Hashnode}
+\textit{\newline Technical Writer}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Published technical blogs on \textbf{Kubernetes}, \textbf{Docker}, \textbf{Go}, and \textbf{AWS}.
+
+\item Created hands-on tutorials covering \textbf{KubeEdge}, \textbf{K3s}, and other \textbf{CNCF} technologies.
+
+\end{highlights}
+\end{onecolentry}
+
+
+
+
+\section{Projects}
+\begin{twocolentry}{\textit{\href{https://github.com/sachin21212121/ModelForge-Kubeflow-Project}{github}}}
+\textbf{ModelForge: End-to-End MLOps Platform with Kubeflow}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Built an end-to-end \textbf{MLOps platform} on \textbf{Kubernetes} using \textbf{Kubeflow}, enabling automated model training, experimentation, deployment, and inference.
+
+\item Integrated components such as \textbf{Kubeflow Pipelines}, \textbf{Katib}, and model serving to streamline the machine learning lifecycle with reproducible workflows.
+
+\item Tools: Kubeflow, Kubernetes, Docker, Python, ML Pipelines
+
+\end{highlights}
+\end{onecolentry}
+
+
+\begin{twocolentry}{\textit{\href{https://github.com/sachin21212121/kubejournal}{github}}}
+\textbf{KubeJournal: Kubernetes Cluster Log Collection}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Developed a \textbf{Go-based} Kubernetes log collection utility to retrieve and centralize \textbf{node-level logs} across clusters for easier troubleshooting.
+
+\item Leveraged \textbf{DaemonSets} to collect logs from every Kubernetes node, simplifying observability and debugging in distributed environments.
+
+\item Tools: Go, Kubernetes, DaemonSets, Linux
+
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{\textit{\href{https://github.com/sachin21212121/jenkins-end-to-end-cicd-using-argocd.git}{github}}}
+\textbf{GitOps CI/CD Pipeline with Jenkins \& ArgoCD}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+
+\item Designed a \textbf{GitOps CI/CD pipeline} integrating \textbf{Jenkins} and \textbf{ArgoCD} for automated Kubernetes deployments.
+
+\item Implemented \textbf{SonarQube}, Docker image builds, auto-sync, and rollback mechanisms to improve deployment reliability.
+
+\item Tools: Jenkins, ArgoCD, Docker, SonarQube, Kubernetes
+
+\end{highlights}
+\end{onecolentry}
+
+
+\section{Activities/Achievements}
+
+\begin{onecolentry}\begin{highlights}
+\item \textbf{Speaker at KubeCon + CloudNativeCon India 2026} – Presented a \href{https://youtu.be/jh6MABNazjg?si=pF5qn618wqoB7V1j}{\textbf{talk}} at a \textbf{prestigious Cloud Native conference}, ``Validating RK3588 for KubeEdge: Scalable ARM64 Edge Node Simulation Without Hardware''.
+
+\item 
+\textbf{Speaker at CNCF Thane} – Delivered a session on \textbf{WebAssembly in Cloud Native Ecosystems}, highlighting its role in portability, performance, and secure edge computing.
+
+
+\item 
+Reported a valid \textbf{local path traversal vulnerability} in \textbf{AWS SAM CLI}, acknowledged by the AWS Security team as part of their \textbf{bug bounty program}.
+
+\item 
+\textbf{Active in Cloud \& DevOps Communities} – Regularly participate in \textbf{GDG Cloud}, \textbf{AWS User Groups}, and \textbf{CNCF meetups} to stay \textbf{updated} and connect with \textbf{industry experts}.
+
+
+
+
+
+
+
+
+
+\end{highlights}\end{onecolentry}
+
+\section{Certifications}
+
+\begin{twocolentry}
+{\textit{\href{https://learn.kodekloud.com/user/certificate/e527fc9c-a3a3-419e-a9dc-3a2da78ec0ae}{link}}}
+\textbf{Certified Kubernetes Administrator (CKA) – KodeKloud}
+\end{twocolentry}
+
+\begin{twocolentry}
+{\textit{\href{https://learn.kodekloud.com/user/certificate/00365e35-1076-4543-973b-d891ee3eb82f}{link}}}
+\textbf{Kubernetes and Cloud Native Associate (KCNA) – KodeKloud}
+\end{twocolentry}
+
+\begin{twocolentry}
+{\textit{\href{https://www.credly.com/badges/59909b1f-fa82-4e42-9ab0-8d263d91fb1b}{link}}}
+\textbf{KubeCon + CloudNativeCon India 2026 Speaker}
+\end{twocolentry}
+
+\begin{twocolentry}
+{\textit{\href{https://www.credly.com/badges/428bab79-2bfc-4740-b77a-caca440b69ad/linked_in_profile}{link}}}
+\textbf{AWS Knowledge: Cloud Essentials}
+\end{twocolentry}
+
+
+
+
+
+
+\end{document}
