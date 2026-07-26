@@ -3,11 +3,11 @@
 % Packages:
 \usepackage[
     ignoreheadfoot,
-    top=0.3 cm,
-    bottom=0.3 cm,
-    left=0.9 cm,
-    right=0.9 cm,
-    footskip=0.7 cm,
+    top=0.4 cm,
+    bottom=0.4 cm,
+    left=1 cm,
+    right=1 cm,
+    footskip=1.0 cm,
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -48,17 +48,20 @@
 \setlength{\topskip}{0pt}
 \setlength{\columnsep}{0cm}
 \makeatletter
-\let\ps@customFooterStyle\ps@plain
-\patchcmd{\ps@customFooterStyle}{\thepage}{}{}{}
+\def\ps@customFooterStyle{%
+  \def\@oddfoot{\hfil\footnotesize\color{gray}Page \thepage\ of \pageref{LastPage}\hfil}%
+  \let\@evenfoot\@oddfoot
+  \def\@oddhead{}\let\@evenhead\@oddhead
+}
 \makeatother
 \pagestyle{customFooterStyle}
 
-\titleformat{\section}{\needspace{1\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
-\titlespacing{\section}{-1pt}{0.08 cm}{0.08 cm}
+\titlespacing{\section}{-1pt}{0.1 cm}{0.1 cm}
 
 \renewcommand\labelitemi{$\circ$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.05 cm,parsep=0.05 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm,parsep=0.10 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
 \newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.05 cm,parsep=0.05 cm,partopsep=0pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
 \newenvironment{onecolentry}{\begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}}{\end{adjustwidth}}
 \newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
@@ -74,7 +77,7 @@
 \begin{header}
 \textbf{\fontsize{24 pt}{24 pt}\selectfont Sachin Jha}
 
-\vspace{0.15 cm}
+\vspace{0.3 cm}
 
 \normalsize
 \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Mumbai}%
@@ -118,7 +121,11 @@
 \end{onecolentry}
 
 \begin{onecolentry}
-\textbf{Platforms \& Databases:} AWS, Linux, OpenShift, Git, Salesforce, MySQL, MongoDB
+\textbf{Platforms:} AWS, Linux, OpenShift, Git, Salesforce
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Databases:} MySQL, MongoDB
 \end{onecolentry}
 \section{Experience}
 
@@ -130,11 +137,13 @@
 \begin{onecolentry}
 \begin{highlights}
 
-\item Built a production-ready \textbf{Zscaler MCP Server} unifying 3 modules (ZIA, ZPA, ZCC) into a single interface, used daily by security leads and by 100+ engineers across the global delivery team when resolving access issues.
+\item Built a production-ready \textbf{Zscaler MCP Server} unifying 3 modules (ZIA, ZPA, ZCC) into a single interface, used daily by security leads and 100+ engineers across the global delivery team when resolving access issues.
 
 \item Developed an AI-powered \textbf{vulnerability scanner} correlating 4 data sources (CVE, NVD, EPSS, CVSS) to assess software risk -- adopted as the standard tool by 1000+ engineers across Zycus.
 
-\item Automated \textbf{OpenShift VM provisioning} using Salesforce, Python, and Golden PVC templates, replacing a manual, ticket-based workflow: once approved, VMs now provision in OCP within seconds, tracked end-to-end through Jira.
+\item Automated \textbf{OpenShift VM provisioning} using Salesforce, Python, and Golden PVC templates, replacing a manual, ticket-based workflow -- once approved, VMs now provision in OCP within seconds, tracked end-to-end through Jira.
+
+\item Built and deployed enterprise automation using \textbf{AWS CodeBuild and ArgoCD}, contributing to AI-powered developer productivity tools.
 
 \end{highlights}
 \end{onecolentry}
@@ -171,13 +180,16 @@
 \section{Speaking \& Recognition}
 
 \begin{onecolentry}\begin{highlights}
-\item \textbf{Speaker at KubeCon + CloudNativeCon India 2026} -- Presented a \href{https://youtu.be/jh6MABNazjg?si=FpBaVoH76mj-QRMh}{\textbf{talk}} at a prestigious Cloud Native conference, ``Validating RK3588 for KubeEdge: Scalable ARM64 Edge Node Simulation Without Hardware''.
+\item \textbf{Speaker at KubeCon + CloudNativeCon India 2026} -- Presented a \href{https://youtu.be/jh6MABNazjg?si=FpBaVoH76mj-QRMh}{\textbf{talk}}, ``Validating RK3588 for KubeEdge: Scalable ARM64 Edge Node Simulation Without Hardware''.
 
 \item
-\textbf{Speaker at CNCF Thane} -- Delivered a session on WebAssembly in Cloud Native Ecosystems, highlighting its role in portability, performance, and secure edge computing.
+Volunteered at the \textbf{Kubeflow booth} at KubeCon + CloudNativeCon India 2026, engaging with the MLOps community and gaining hands-on exposure to real-world ML workflows.
 
 \item
-Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, acknowledged by AWS Security's bug bounty program.
+\textbf{Speaker at CNCF Thane} -- Delivered a session on WebAssembly in Cloud Native Ecosystems: portability, performance, and secure edge computing.
+
+\item
+Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, acknowledged by AWS Security under their bug bounty program.
 
 \end{highlights}\end{onecolentry}
 
@@ -192,6 +204,8 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 \item Built an end-to-end \textbf{MLOps platform} on Kubernetes using Kubeflow, enabling automated model training, experimentation, deployment, and inference.
 
 \item Integrated Kubeflow Pipelines, Katib, and model serving to streamline the machine learning lifecycle with reproducible workflows.
+
+\item Tools: Kubeflow, Kubernetes, Docker, Python, ML Pipelines
 
 \end{highlights}
 \end{onecolentry}
@@ -208,6 +222,8 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 
 \item Leveraged \textbf{DaemonSets} to collect logs from every Kubernetes node, simplifying observability and debugging in distributed environments.
 
+\item Tools: Go, Kubernetes, DaemonSets, Linux
+
 \end{highlights}
 \end{onecolentry}
 
@@ -221,6 +237,8 @@ Reported a valid \textbf{local path traversal vulnerability} in AWS SAM CLI, ack
 \item Designed a \textbf{GitOps CI/CD pipeline} integrating Jenkins and ArgoCD for automated Kubernetes deployments.
 
 \item Implemented 4 pipeline stages -- SonarQube analysis, Docker image builds, auto-sync, and rollback -- to improve deployment reliability.
+
+\item Tools: Jenkins, ArgoCD, Docker, SonarQube, Kubernetes
 
 \end{highlights}
 \end{onecolentry}
