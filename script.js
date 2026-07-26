@@ -4,7 +4,6 @@
   var root = document.documentElement;
   var THEME_KEY = "theme";
 
-  // ---- Theme toggle ----
   var themeToggle = document.getElementById("theme-toggle");
   var storedTheme = localStorage.getItem(THEME_KEY);
   if (storedTheme === "light" || storedTheme === "dark") {
@@ -23,7 +22,6 @@
     localStorage.setItem(THEME_KEY, next);
   });
 
-  // ---- Mobile nav toggle ----
   var navToggle = document.getElementById("nav-toggle");
   var navLinks = document.getElementById("nav-links");
 
@@ -39,7 +37,6 @@
     });
   });
 
-  // ---- Active nav link on scroll ----
   var sections = document.querySelectorAll("main section[id]");
   var navAnchors = document.querySelectorAll(".nav-links a");
 
@@ -58,7 +55,6 @@
     sections.forEach(function (section) { navObserver.observe(section); });
   }
 
-  // ---- Reveal on scroll ----
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
     var revealObserver = new IntersectionObserver(
@@ -77,7 +73,24 @@
     revealEls.forEach(function (el) { el.classList.add("in-view"); });
   }
 
-  // ---- Footer year ----
+  var typedNameEl = document.getElementById("typed-name");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (typedNameEl) {
+    var fullName = "Sachin Jha";
+    if (reduceMotion) {
+      typedNameEl.textContent = fullName;
+    } else {
+      var i = 0;
+      (function typeChar() {
+        if (i <= fullName.length) {
+          typedNameEl.textContent = fullName.slice(0, i);
+          i++;
+          setTimeout(typeChar, 70);
+        }
+      })();
+    }
+  }
+
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
