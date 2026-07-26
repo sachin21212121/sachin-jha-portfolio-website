@@ -53,7 +53,7 @@
 \makeatother
 \pagestyle{customFooterStyle}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{2\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{-1pt}{0.08 cm}{0.08 cm}
 
@@ -118,11 +118,7 @@
 \end{onecolentry}
 
 \begin{onecolentry}
-\textbf{Platforms:} AWS, Linux, OpenShift, Git, Salesforce
-\end{onecolentry}
-
-\begin{onecolentry}
-\textbf{Databases:} MySQL, MongoDB
+\textbf{Platforms \& Databases:} AWS, Linux, OpenShift, Git, Salesforce, MySQL, MongoDB
 \end{onecolentry}
 \section{Experience}
 
@@ -139,8 +135,6 @@
 \item Developed an AI-powered \textbf{vulnerability scanner} correlating 4 data sources (CVE, NVD, EPSS, CVSS) to assess software risk -- adopted as the standard tool by 1000+ engineers across Zycus.
 
 \item Automated \textbf{OpenShift VM provisioning} using Salesforce, Python, and Golden PVC templates, replacing a manual, ticket-based workflow: once approved, VMs now provision in OCP within seconds, tracked end-to-end through Jira.
-
-\item Built and deployed enterprise automation using \textbf{AWS CodeBuild and ArgoCD}, contributing to AI-powered developer productivity tools.
 
 \end{highlights}
 \end{onecolentry}
