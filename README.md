@@ -53,7 +53,7 @@
 \makeatother
 \pagestyle{customFooterStyle}
 
-\titleformat{\section}{\needspace{2\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{1\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{-1pt}{0.08 cm}{0.08 cm}
 
